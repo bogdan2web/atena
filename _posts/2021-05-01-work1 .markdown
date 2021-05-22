@@ -1,0 +1,14 @@
+---
+title: Work1
+permalink: /blog/:title/ 
+layout: post
+modal-id: 2
+date: 2021-05-01
+img: work1.jpg
+alt: work1
+project-date: May 2021
+autor: Bogdan
+categories: [Work, Bogdan]
+description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+
+---
