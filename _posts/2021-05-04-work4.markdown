@@ -1,0 +1,14 @@
+---
+title: Work4
+permalink: /blog/:title/
+layout: post
+modal-id: 8
+date: 2021-05-04
+img: work4.jpg
+alt: work4
+project-date: May 2021
+autor: Atena
+categories: [Work, Atena]
+description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+
+---
