@@ -1,0 +1,47 @@
+
+<div class="row">
+  <div class="side">
+    <h2>Autor</h2>
+    <br>
+    <div class="card">
+          <a href="{{ site.url }}/about.html">
+            <img src="{{ site.url }}/img/{{page.autor}}.jpg" alt="Atena" class= "responsive" width="400" height="400">
+          </a>
+          <div class="card.desc">
+             <h2>{{page.autor}}</h2>
+             <h4> clasa a XII-a A </h4>
+             <h4> Colegiul National Decebal</h4>
+             <ul> 
+               <li><a href="#" class="fa fa-facebook"></a></li>
+               <li><a href="#" class="fa fa-twitter"></a></li>
+             </ul>
+          </div>
+    </div> 
+    <br>
+    <div class="card">
+      <h2>Ultimele postari:</h2>
+
+      <ul class="posts">
+           {% for post in site.posts limit:10 %}
+                <li>
+                   <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </li>
+           {% endfor %}
+       </ul>
+     </div>
+      <br>
+  </div> 
+  <div class="main">
+
+   <div class="card">
+      <img src="{{ site.url }}/img/portofolio/{{page.img}}" alt="{{page.img}}" class= "responsive"  width="1200" height="1200">
+      <br>
+      <h2>{{page.title}}</h2>
+      <br>
+      <h3>{{page.description}}</h3>        
+   </div>
+      <br>
+
+  </div>
+

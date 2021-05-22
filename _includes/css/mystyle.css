@@ -1,0 +1,405 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: FloralWhite;
+}
+h2 {
+    color: lightsalmon;
+    font-size: 20px;
+}
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+  background-position: center center;
+  background-repeat: none;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+.header.desc {
+  padding: 2px;
+  text-align: center;
+  font-size: 500px;
+}
+
+/*navigation*/
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  top: 0;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+ }
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+/*sticky nav*/
+
+
+
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+/* Float two columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+/*image prop*/
+img {
+  width: 100%;
+  height: auto;
+}
+.responsive {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 20%; /* IE10 */
+  flex: 20%;
+  background-color: FloralWhite;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 80%; /* IE10 */
+  flex: 80%;
+  background-color: FloralWhite;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 700px) {
+  .side, .main {
+    flex: 100%;
+  }
+}
+
+.card {
+  background-color: FloralWhite;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 5px 5px 20px 3px LightGrey;
+}
+card.desc {
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 35px;
+  background-color: LightGrey;
+  padding: 0px;
+  font-size: 5px;
+  color: white;
+}
+div.page {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: FloralWhite;
+  padding: 0px;
+  font-size: 5px;
+  color: black;
+  float: top;
+  text-align: center;
+}
+ul {
+  list-style: none; /* Remove HTML bullets */
+  padding: 0;
+  margin: 0;
+}
+
+li { 
+  padding-left: 4px; 
+}
+
+li::before {
+  content: "•"; /* Insert content that looks like bullets */
+  padding-right: 4px;
+  color: lightsalmon; /* Or a color you prefer */
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: center;
+  width: 100%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: left;
+  font-size: 20px;
+}
+/* contact */
+section#contact {
+    background-color: #222;
+    background-image: url('{{ site.baseurl }}/img/map-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section#contact .section-heading {
+    color: #fff;
+   
+}
+
+section#contact .form-group {
+    margin-bottom: 25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+    padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+    height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+    height: 236px;
+}
+
+section#contact .form-control:focus {
+    border-color: black;
+    box-shadow: none;
+}
+
+section#contact::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact:-moz-placeholder {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact::-moz-placeholder {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact .text-danger {
+    color: #e74c3c;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: FloralWhite;
+  color: LightGrey;
+  text-align: center;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+   }
+   .main, .side {
+    flex: 100%;
+  }
+  .card {
+  background-color: FloralWhite;
+  width: 100%;
+  max-width: 710px;
+  padding: 5px;
+  box-shadow: 5px 5px 20px 3px LightGrey;
+}
+  card.desc {
+  padding: 1px;
+  text-align: left;
+  font-size: 12px
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+
+.card {
+  background-color: FloralWhite;
+  width: 100%;
+  max-width: 410px;
+  padding: 5px;
+  box-shadow: 5px 5px 20px 3px LightGrey;
+}
+  card.desc {
+  padding: 1px;
+  text-align: left;
+  font-size: 6px
+}
+
+}
+/* Style Social Media Buttons */
+.fa {
+  padding: 20px;
+  font-size: 120px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+/*contact form*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.cardcontact {
+  width: 100%;
+  max-width: 410px;
+  padding: 5px;
+  box-shadow: 5px 5px 20px 3px LightGrey;
+  background-image: url('{{ site.baseurl }}/img/map-image.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
