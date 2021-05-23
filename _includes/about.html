@@ -1,22 +1,14 @@
+<div class="row">
 
- <div class="row">
-  <div class="side">
-    <h2>About</h2>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
+   <div class="main">
+  
     
-    <br>
-
-    <h2>ABOUT/CONTACT</h2>
-    
-   <br>
-   <a href="{{ site.url }}/about.html">
-      <div class="card">
-          <a href="{{ site.url }}/about.html">
-            <img src="{{ site.url }}/img/Atena.jpg" alt="Atena" class= "responsive" width="400" height="400">
-          </a>
-          <div class="card.desc">
+       <h2>About</h2>
+       <br>
+       <div class="column">        
+         <div class="card">
+            <img src="{{ site.url }}/img/{{page.imgautor1}}.jpg" alt="{{page.imgautor1}}" class= "responsive" width="400" height="400">
+            <div class="card.desc">
              <h2>Atena</h2>
              <h4> clasa a XII-a A </h4>
              <h4> Colegiul National Decebal</h4>
@@ -24,30 +16,40 @@
                <li><a href="#" class="fa fa-facebook"></a></li>
                <li><a href="#" class="fa fa-twitter"></a></li>
              </ul>
-         </div>
-      </div>
-    </a>
-    <br>
-     <div class="card">     
-        <a href="{{ site.url }}/about.html">         
-           <img src="{{ site.url }}/img/Bogdan.jpg" class= "responsive" width="400" height="400">
-        </a>
-        <div class="card.desc">
+            </div><!--end desc-->
+          </div><!--end card-->
+            <br>
+            <div class="card">
+               <h4>{{ page.content }}</h4>
+            </div>
+        </div><!--end column-->
+
+    
+    <div class="column">        
+         <div class="card">
+            <img src="{{ site.url }}/img/{{page.imgautor2}}.jpg" alt="{{page.imgautor2}}" class= "responsive" width="400" height="400">
+            <div class="card.desc">
              <h2>Bogdan</h2>
              <h4> clasa a XII-a A </h4>
              <h4> Colegiul National Decebal</h4>
              <ul> 
-               <li><a href="#" class="fa fa-facebook"></a></li>
+               <li><a href="https://www.facebook.com/borlea.gheorghe" class="fa fa-facebook"></a></li>
                <li><a href="#" class="fa fa-twitter"></a></li>
              </ul>
-        </div>
-    </div> 
-    <br>
-  
-     <br>
+            </div><!--enddesc-->
+          </div><!--endcard-->
+          <br>
+          <div class="card">
+         <h4>&ensp;Numele meu este Bogdan. Trăind “la bloc” nu am știut aproape nimic despre diferitele specii de ciuperci.&ensp;<br>&ensp;Aceasta a fost pentru mine o oportunitate de învăța mai multe despre acest subiect. Ideea de a face un fel de ghid al ciupercilor folosind pozele făcute de Atena a evoluat însă într-un proiect personal, care dezvăluie o parte din personalitățile noastre interesate de natură, și spiritul nostru artistic: Atena prin pozele și bijuteriile făcute, iar eu prin website design.</h4>
+          </div>
+    </div><!--end column-->
+   
+  </div><!-- end main-->
+  <div class="side">
+    
     <div class="card">
       <h2>Ultimele postari:</h2>
-
+      <br>   
       <ul class="posts">
            {% for post in site.posts limit:10 %}
                 <li>
@@ -56,21 +58,15 @@
                 </li>
            {% endfor %}
        </ul>
-     </div>
-      <br>
-</div> 
-  
-<div class="main">
-    <h2>About</h2>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
+    </div><!--end card-->
+    <br>
     
-    <br>
-    <h2>Contact Form</h2>
-    <br>
-   <div class="cardcontact">
-      <form action="/action_page.php">
+    <div class="card">
+      <h2>Contact Form:</h2>
+      <br>
+      
+      <!--form action="/action_page.php" class="container"-->
+       <div class="card">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Your name..">
         <br>
@@ -79,12 +75,19 @@
         <br>
         <br>
         <label for="subject">Comment:</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
         <br>
         <input type="send" value="Send:">
-     </form>
-  </div>
-</div>
+       </div> 
+      <!--/form-->
+     
+    </div><!--end card-->
+   
+     <br>
+    
+</div> 
+</div>  
+
     
 
 

@@ -1,12 +1,75 @@
 <div class="row">
-  <div class="side">
-    <h2>About</h2>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    
-    <br>
 
+    <div class="main">
+
+      <h2>Archives</h2>
+      <h1>all posts</h1>
+
+       <ul class="posts">
+         {% for post in site.posts %}
+          <div class="column">        
+           <div class="card">
+             <li>
+             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} <img src="{{ site.url }}/img/portofolio/{{ post.img }}" alt="{{ post.alt}}" class="reduce"></a>             
+             </li>
+            </div>
+             <br>
+          </div>
+         {% endfor %}
+       </ul>
+
+      <br>
+       <h1>by category Work</h1>
+        <ul class="posts">
+         {% for post in site.categories.Work %}
+          <div class="column">        
+            <li>
+             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+          </div>
+         {% endfor %}
+        </ul>
+       <br>
+      <h1>by category Photo</h1>
+        <ul class="posts">
+          {% for post in site.categories.Photo %}
+           <div class="column">   
+             <li>
+               <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+             </li>
+           </div>
+          {% endfor %}
+        </ul>
+       <br>
+      <h1>by category autor Atena</h1>   
+       <ul class="posts">
+        {% for post in site.categories.Atena %}
+         <div class="column">   
+          <li>
+           <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+         </div>
+        {% endfor %}
+       </ul>
+      <br>
+     <h1>by category autor Bogdan</h1>
+     <ul class="posts">
+       {% for post in site.categories.Bogdan %}
+        <div class="column">  
+         <li>
+          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+        </div>
+       {% endfor %}
+      </ul>
+   
+</div>
+  <div class="side">
     <h2>ABOUT/CONTACT</h2>
     
    <br>
@@ -43,71 +106,8 @@
     </div> 
     <br>
   
-     <br>
-    <div class="card">
-      <h2>Ultimele postari:</h2>
-
-      <ul class="posts">
-           {% for post in site.posts limit:10 %}
-                <li>
-                   <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </li>
-           {% endfor %}
-       </ul>
-     </div>
-      <br>
+    
+    
 </div> 
   
-  <div class="main">
-
-    <h2>Archives</h2>
-  <h1>all posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-    
-    <br>
-<h1>by category Work</h1>
-
-   <ul class="posts">
-    {% for post in site.categories.Work %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-   </ul>
-
-<h1>by category Photo</h1>
-<ul class="posts">
-    {% for post in site.categories.Photo %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-   </ul>
-     <h1>by category autor Atena</h1>
-     {% for post in site.categories.Atena %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</ul>
-     <h1>by category autor Bogdan</h1>
-     {% for post in site.categories.Bogdan %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+ 
