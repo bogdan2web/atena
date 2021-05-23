@@ -1,0 +1,13 @@
+---
+title: Work6
+permalink: /blog/:title/ 
+layout: post
+id: 10
+date: 2021-05-06
+img: work6.jpg
+alt: work6
+project-date: May 2021
+autor: Atena
+categories: [Work, Atena]
+description: Cercei si bijuterii din cristale si ciuperci conservate prin deshidratare si acoperire cu rasini.
+---

@@ -1,0 +1,13 @@
+---
+title: Russula  
+permalink: /blog/:title/
+layout: post
+id: 17
+date: 2021-05-11
+img: Russula.jpg 
+alt: Russula
+project-date: May 2021
+autor: Atena
+categories: [Photo, Atena]
+description: Russula este un gen de ciuperci, parte unei increngaturi a diviziei Basidiomycota din familia Russulaceae, denumit in popor intre altele hulubica, iescuta, oiana, padurene, sau vinetica, al carui nume generic este derivat din cuvantul latin russulus, diminutiv al adjectivului russus, ce inseamna rosior, rosu-maro. Acest gen cuprinde 750 de specii global, peste 90 in Europa. Fiind un simbiont micoriza (formeaza micorize pe radacinile arborilor) el se dezvolta de aceea in Romania, Basarabia si Bucovina de Nord – de la campie la munte – numai in paduri de foioase sau conifere, dar niciodata prin campuri, parcuri sau livezi, din mai-iunie pana in octombrie-noiembrie.
+---
